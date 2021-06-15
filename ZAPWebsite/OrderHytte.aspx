@@ -45,18 +45,23 @@
                     
                     <label for="morgenA">Morgenkomplet (Voksen)</label>
                     <input type="checkbox" name="morgenA"/>
+                    <input type="number" name="morgenA" max="10" value="0" min="0"/>
                     
                     <label for="morgenK">Morgenkomplet (Børn)</label>
                     <input type="checkbox" name="morgenK"/>
+                    <input type="number" name="morgenK" max="10" value="0" min="0"/>
                     
                     <label for="bike">Cykelleje</label>
                     <input type="checkbox" name="bike"/>
+                    <input type="number" name="bike" max="10" value="0" min="0"/>
                     
                     <label for="waterlandA">Adgang til badeland (Voksen)</label>
                     <input type="checkbox" name="waterlandA"/>
+                    <input type="number" name="waterlandA" max="10" value="0" min="0"/>
                     
                     <label for="waterlandK">Adgang til badeland (Børn)</label>
                     <input type="checkbox" name="waterlandK"/>
+                    <input type="number" name="waterlandK" max="10" value="0" min="0"/>
                     
                     <label for="endClean">Slutrengøring</label>
                     <input type="checkbox" name="endClean"/>

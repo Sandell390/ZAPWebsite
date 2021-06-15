@@ -82,6 +82,7 @@
                     
                     <a href="Booking.aspx"><img class="backImg" src="Pics/backArrow.png"/></a>
                     <button type="button" onclick="" class="buttonOrder">Bestil</button>
+                    <asp:Button runat="server" CssClass="buttonOrder"/>
                     
 
                 </section>

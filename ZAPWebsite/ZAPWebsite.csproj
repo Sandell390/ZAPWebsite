@@ -207,6 +207,7 @@
     <Compile Include="OrderCampingvogn.aspx.designer.cs">
       <DependentUpon>OrderCampingvogn.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OrderHandler.cs" />
     <Compile Include="OrderSeason.aspx.cs">
       <DependentUpon>OrderSeason.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
