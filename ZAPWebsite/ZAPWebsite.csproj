@@ -200,6 +200,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs" />
     <Compile Include="OrderCampingvogn.aspx.cs">
       <DependentUpon>OrderCampingvogn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

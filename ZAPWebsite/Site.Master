@@ -26,7 +26,41 @@
         </footer>            
     </form>
 
+<script>
 
+    
+    function ShowOrHide(id, display = "inline-block") {
+        var test = document.getElementById(id);
+        console.log(id);
+
+        if (display == "block") {
+            if (test.style.display == "block") {
+                test.style.display = "none";
+            } else {
+                test.style.display = "block";
+            }
+        } else {
+            if (test.style.display == "inline-block") {
+                test.style.display = "none";
+            } else {
+                test.style.display = "inline-block";
+            }
+        }
+
+        document.getElementById(id).checked = false;
+        document.getElementById(id).value = 0;
+
+    }
+
+    function Hide(id) {
+        var test = document.getElementById(id);
+        console.log(id);
+        test.style.display = "none";
+
+        document.getElementById(id).checked = false;
+        document.getElementById(id).value = 0;
+    }
+</script>
 
 </body>
 </html>
