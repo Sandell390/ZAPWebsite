@@ -139,6 +139,7 @@
     <Content Include="Pics\frontPagePic2.jpg" />
     <Content Include="Pics\Header_pic.jpg" />
     <Content Include="Pics\orderBackground.jpg" />
+    <Content Include="Pics\orderBackground2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

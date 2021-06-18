@@ -10,6 +10,15 @@
     </nav>
     
     <section class="order">
+        
+        <section>
+                            
+                            <a href="Booking.aspx"><img class="backImg" src="Pics/backArrow.png"/></a>
+                            <asp:Button OnClick="buttonOrder_OnClick" ID="buttonOrder" CssClass="buttonOrder" runat="server" Text="Bestil" />
+                            
+        
+                        </section>
+        
         <article>
             <form action="" method="post">
                 
@@ -92,13 +101,7 @@
 
                 </section>
                 
-                <section>
-                    
-                    <a href="Booking.aspx"><img class="backImg" src="Pics/backArrow.png"/></a>
-                    <asp:Button OnClick="buttonOrder_OnClick" ID="buttonOrder" CssClass="buttonOrder" runat="server" Text="Bestil" />
-                    
-
-                </section>
+                
 
             </form>
         </article>
