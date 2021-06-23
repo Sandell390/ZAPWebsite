@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <form runat="server">
+<form runat="server">
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         </asp:ContentPlaceHolder>
         
@@ -28,7 +28,10 @@
 
 <script>
 
-    
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById("MainContent_startDate").setAttribute('min', today);
+
+
     function ShowOrHide(id, display = "inline-block") {
         var test = document.getElementById(id);
         console.log(id);
@@ -60,6 +63,65 @@
         document.getElementById(id).checked = false;
         document.getElementById(id).value = 0;
     }
+
+    function LimitDate() {
+
+        var startDate = new Date(document.getElementById("MainContent_startDate").value);
+
+        startDate.setDate(startDate.getDate() + 1);
+
+        var stringDate = startDate.toISOString().split('T')[0];
+
+        document.getElementById("MainContent_endDate").setAttribute('min', stringDate);
+        
+    }
+
+    function getPrice() {
+
+        var price = 0;
+        var today = new Date();
+
+        //HøjSæson
+        if ((today.getMonth() >= 6 && today.getDay() >= 14) || (today.getMonth() <= 8 && today.getDay() <= 15) ) {
+
+            /*
+            price += document.getElementById("adult").value;
+            price += document.getElementById("kid").value;
+            price += document.getElementById("dog").value;
+            price += document.getElementById("morgenA").value;
+            price += document.getElementById("morgenK").value;
+            price += document.getElementById("bike").value;
+            price += document.getElementById("waterlandA").value;
+            price += document.getElementById("waterlandK").value;
+            price += document.getElementById("endClean").value;
+            price += document.getElementById("bedThing").value;
+            price += document.getElementById("luksus").value;
+            price += document.getElementById("waterView").value;
+            price += document.getElementById("waterView").value;
+            price += document.getElementById("waterView").value;
+            price += document.getElementById("waterView").value;
+            */
+
+            var startDate = new Date(document.getElementById("MainContent_startDate").value);
+            var endDate = new Date(document.getElementById("MainContent_endDate").value);
+            
+            // To calculate the time difference of two dates
+            var Difference_In_Time = endDate.getTime() - startDate.getTime();
+
+            // To calculate the no. of days between two dates
+            var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+            console.log(Difference_In_Days);
+            console.log(startDate.getTime());
+
+        }
+
+        //document.getElementById("price").value = price;
+
+
+    }
+
+
 </script>
 
 </body>

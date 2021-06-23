@@ -40,7 +40,7 @@
                 <section class="input-counters">
 
                     <label for="adult">Voksen</label>
-                    <input type="number" max="10" name="adult" value="1" min="0" ID="adult" runat="server"/>
+                    <input type="number" max="10" name="adult" value="1" min="1" ID="adult" runat="server"/>
                     
                     <label for="kid">Børn</label>
                     <input type="number" max="10" name="kid" value="0" min="0" ID="kid" runat="server"/>

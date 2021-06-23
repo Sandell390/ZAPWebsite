@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="Ordering" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OrderSeason.aspx.cs" Inherits="ZAPWebsite.OrderSeason" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
+    
+
     <nav>
         <ul class="navbar">
             <li><a href="Default.aspx" class="navtabs">Forside</a></li>
@@ -39,9 +41,6 @@
 
                 <section class="input-counters">
 
-                    <label for="person">Personer</label>
-                    <input type="number" max="20" name="person" value="1" min="0"  ID="persons" runat="server"/>
-                    
                     <p>Hvad vil du bo i?</p>
 
                     <label for="telt">Telt</label>
@@ -54,27 +53,7 @@
                 </section>
                 
                 <section class="input-addons">
-                    
-                    <label for="morgenA">Morgenkomplet (Voksen)</label>
-                    <input type="checkbox" name="morgenA" onclick="ShowOrHide('MainContent_morgenA')"/>
-                    <input style="display: none" type="number" name="morgenA" max="10" value="0" min="0" ID="morgenA" runat="server"/>
-                    
-                    <label for="morgenK">Morgenkomplet (Børn)</label>
-                    <input type="checkbox" name="morgenK" onclick="ShowOrHide('MainContent_morgenK')" />
-                    <input style="display: none" type="number" name="morgenK" max="10" value="0" min="0" ID="morgenK" runat="server"/>
-                    
-                    <label for="bike">Cykelleje</label>
-                    <input type="checkbox" name="bike" onclick="ShowOrHide('MainContent_bike')"/>
-                    <input style="display: none" type="number" name="bike" max="10" value="0" min="0" ID="bike" runat="server"/>
-                    
-                    <label for="waterlandA">Adgang til badeland (Voksen)</label>
-                    <input type="checkbox" name="waterlandA" onclick="ShowOrHide('MainContent_waterlandA')"/>
-                    <input style="display: none" type="number" name="waterlandA" max="10" value="0" min="0" ID="waterlandA" runat="server"/>
-                    
-                    <label for="waterlandK">Adgang til badeland (Børn)</label>
-                    <input type="checkbox" name="waterlandK" onclick="ShowOrHide('MainContent_waterlandK')"/>
-                    <input style="display: none" type="number" name="waterlandK" max="10" value="0" min="0" ID="waterlandK" runat="server"/>
-                    
+
                     <label for="water">God udsigt til vandet</label>
                     <input type="checkbox" name="water" ID="waterView" runat="server"/>
 

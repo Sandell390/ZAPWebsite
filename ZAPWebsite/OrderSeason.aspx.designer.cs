@@ -7,192 +7,128 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZAPWebsite {
-    
-    
-    public partial class OrderSeason {
-        
+namespace ZAPWebsite
+{
+
+
+    public partial class OrderSeason
+    {
+
         /// <summary>
         /// buttonOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button buttonOrder;
-        
+
         /// <summary>
         /// name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText name;
-        
+
         /// <summary>
         /// telefonNr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText telefonNr;
-        
+
         /// <summary>
         /// email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText email;
-        
+
         /// <summary>
         /// Address control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Address;
-        
-        /// <summary>
-        /// persons control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl persons;
-        
+
         /// <summary>
         /// telt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton telt;
-        
+
         /// <summary>
         /// campingvogn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton campingvogn;
-        
-        /// <summary>
-        /// morgenA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl morgenA;
-        
-        /// <summary>
-        /// morgenK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl morgenK;
-        
-        /// <summary>
-        /// bike control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl bike;
-        
-        /// <summary>
-        /// waterlandA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl waterlandA;
-        
-        /// <summary>
-        /// waterlandK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl waterlandK;
-        
+
         /// <summary>
         /// waterView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox waterView;
-        
+
         /// <summary>
         /// bigPlace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox bigPlace;
-        
+
         /// <summary>
         /// winter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton winter;
-        
+
         /// <summary>
         /// spring control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton spring;
-        
+
         /// <summary>
         /// summer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton summer;
-        
+
         /// <summary>
         /// autumn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton autumn;
-        
-        /// <summary>
-        /// Master property.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated property.
-        /// </remarks>
-        public new ZAPWebsite.SiteMaster Master {
-            get {
-                return ((ZAPWebsite.SiteMaster)(base.Master));
-            }
-        }
     }
 }

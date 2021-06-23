@@ -18,13 +18,17 @@ namespace ZAPWebsite
         {
             Order order = new Order();
 
-            order.Name = name.Value;
+            int index = name.Value.IndexOf(' ');
+
+            order.FirstName = name.Value.Substring(0, index);
+
+            order.LastName = name.Value.Substring(index + 1, (name.Value.Length - index) - 1);
             order.Address = Address.Value;
             order.TelefonNr = telefonNr.Value;
             order.Eamil = email.Value;
 
 
-            order.Adult = int.Parse(kid.Value);
+            order.Adult = int.Parse(adult.Value);
             order.Kids = int.Parse(kid.Value);
             order.Dog = int.Parse(dog.Value);
 
@@ -45,7 +49,9 @@ namespace ZAPWebsite
             
             order.SetType("caravan");
 
-            OrderHandler.AddOrder(order);
+            OrderHandler orderHandler = new OrderHandler(order);
+
+            Response.Redirect("Confirm.aspx");
         }
     }
 }

@@ -39,7 +39,7 @@
                 <section class="input-counters">
 
                     <label for="adult">Voksen</label>
-                    <input type="number" max="10" name="adult" value="1" min="0" ID="adult" runat="server"/>
+                    <input type="number" max="10" name="adult" value="1" min="1" ID="adult" runat="server"/>
                     
                     <label for="kid">Børn</label>
                     <input type="number" max="10" name="kid" value="0" min="0" ID="kid" runat="server"/>
@@ -75,7 +75,8 @@
                     <input type="checkbox" name="endClean" ID="endClean" runat="server"/>
 
                     <label for="bed">Sengelinned</label>
-                    <input type="checkbox" name="bed" ID="bedThing" runat="server"/>
+                    <input type="checkbox" name="bed" onclick="ShowOrHide('MainContent_bedThing')"/>
+                    <input style="display: none" type="number" name="bedThing" max="10" value="0" min="0" ID="bedThing" runat="server"/>
                     
                     <label for="luksus">Luksus Hytte</label>
                     <input type="checkbox" name="luksus" ID="luksus" runat="server"/>
@@ -85,10 +86,10 @@
                 <section class="input-date">
                     
                     <label for="startDate">Start Dato</label>
-                    <input type="date"  name="startDate" ID="startDate" runat="server"/>
+                    <input type="date"  name="startDate" ID="startDate" onchange="LimitDate()" runat="server"/>
                     
                     <label for="endDate">Slut Dato</label>
-                    <input type="date"  name="endDate" ID="endDate" runat="server"/>
+                    <input type="date"  name="endDate" ID="endDate" onchange="getPrice()" runat="server"/>
 
                 </section>
                 

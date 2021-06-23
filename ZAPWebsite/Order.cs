@@ -15,12 +15,20 @@ namespace ZAPWebsite
             set { type = value; }
         }
 
-        private string name;
+        private string firstName;
 
-        public string Name
+        public string FirstName
         {
-            get { return name; }
-            set { name = value; }
+            get { return firstName; }
+            set { firstName = value; }
+        }
+
+        private string lastName;
+
+        public string LastName
+        {
+            get { return lastName; }
+            set { lastName = value; }
         }
 
         private string email;
@@ -128,9 +136,9 @@ namespace ZAPWebsite
             set { endClean = value; }
         }
 
-        private bool bedThings;
+        private int bedThings;
 
-        public bool BedThings
+        public int BedThings
         {
             get { return bedThings; }
             set { bedThings = value; }

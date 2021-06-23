@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace ZAPWebsite
@@ -16,15 +18,22 @@ namespace ZAPWebsite
 
         protected void buttonOrder_OnClick(object sender, EventArgs e)
         {
+            
             Order order = new Order();
 
-            order.Name = name.Value;
+            int index = name.Value.IndexOf(' ');
+
+            order.FirstName = name.Value.Substring(0, index);
+
+            order.LastName = name.Value.Substring(index + 1, (name.Value.Length - index) - 1);
+
+
             order.Address = Address.Value;
             order.TelefonNr = telefonNr.Value;
             order.Eamil = email.Value;
 
 
-            order.Adult = int.Parse(kid.Value);
+            order.Adult = int.Parse(adult.Value);
             order.Kids = int.Parse(kid.Value);
             order.Dog = int.Parse(dog.Value);
 
@@ -43,7 +52,10 @@ namespace ZAPWebsite
 
             order.SetType("tent");
 
-            OrderHandler.AddOrder(order);
+            OrderHandler orderHandler = new OrderHandler(order);
+
+            Response.Redirect("Confirm.aspx");
         }
+
     }
 }
