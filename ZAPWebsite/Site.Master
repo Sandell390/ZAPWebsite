@@ -76,49 +76,141 @@
         
     }
 
-    function getPrice() {
+    function getPrice(type) {
 
         var price = 0;
-        var today = new Date();
 
-        //HøjSæson
-        if ((today.getMonth() >= 6 && today.getDay() >= 14) || (today.getMonth() <= 8 && today.getDay() <= 15) ) {
+        var Difference_In_Days = 1;
 
-            /*
-            price += document.getElementById("adult").value;
-            price += document.getElementById("kid").value;
-            price += document.getElementById("dog").value;
-            price += document.getElementById("morgenA").value;
-            price += document.getElementById("morgenK").value;
-            price += document.getElementById("bike").value;
-            price += document.getElementById("waterlandA").value;
-            price += document.getElementById("waterlandK").value;
-            price += document.getElementById("endClean").value;
-            price += document.getElementById("bedThing").value;
-            price += document.getElementById("luksus").value;
-            price += document.getElementById("waterView").value;
-            price += document.getElementById("waterView").value;
-            price += document.getElementById("waterView").value;
-            price += document.getElementById("waterView").value;
-            */
+        if (type != "season") {
+            var today = new Date();
 
             var startDate = new Date(document.getElementById("MainContent_startDate").value);
             var endDate = new Date(document.getElementById("MainContent_endDate").value);
-            
+
             // To calculate the time difference of two dates
             var Difference_In_Time = endDate.getTime() - startDate.getTime();
 
             // To calculate the no. of days between two dates
-            var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+            Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
-            console.log(Difference_In_Days);
-            console.log(startDate.getTime());
 
+            var tempDate = today;
+
+
+
+            for (var i = 0; i < Difference_In_Days; i++) {
+                //HøjSæson
+                if ((tempDate.getMonth() >= 6 && tempDate.getDay() >= 14) || (tempDate.getMonth() <= 8 && tempDate.getDay() <= 15)) {
+
+                        price += parseInt(document.getElementById("MainContent_adult").value) * 82;
+                        price += parseInt(document.getElementById("MainContent_kid").value) * 42;
+                        price += parseInt(document.getElementById("MainContent_dog").value) * 35;
+                    
+                    if (type == "campingvogn") {
+                        if (document.getElementById("MainContent_bigPlace").checked) {
+                            price += 80;
+                        } else {
+                            price += 60;
+                        }
+                    }
+
+                    if (type == "telt") {
+                        price += 35;
+                    }
+
+
+                    if (type == "hytte") {
+                        if (document.getElementById("MainContent_luksus").checked) {
+                            price += 850;
+                        } else {
+                            price += 500;
+                        }
+                    }
+
+
+
+                } else { //LavSæson
+
+                        price += parseInt(document.getElementById("MainContent_adult").value) * 87;
+                        price += parseInt(document.getElementById("MainContent_kid").value) * 49;
+                        price += parseInt(document.getElementById("MainContent_dog").value) * 30;
+
+
+                    if (type == "campingvogn") {
+                        if (document.getElementById("MainContent_bigPlace").checked) {
+                            price += 65;
+                        } else {
+                            price += 50;
+                        }
+                    }
+
+                    if (type == "telt") {
+                        price += 45;
+                    }
+
+
+                    if (type == "hytte") {
+                        if (document.getElementById("MainContent_luksus").checked) {
+                            price += 600;
+                        } else {
+                            price += 350;
+                        }
+                    }
+                }
+
+                tempDate.setDate(tempDate.getDate() + i);
+            }
+
+            price += parseInt(document.getElementById("MainContent_morgenA").value) * 75;
+            price += parseInt(document.getElementById("MainContent_morgenK").value) * 50;
+            price += parseInt(document.getElementById("MainContent_bike").value) * 200;
+            price += parseInt(document.getElementById("MainContent_waterlandA").value) * 30;
+            price += parseInt(document.getElementById("MainContent_waterlandK").value) * 15;
         }
+        
 
-        //document.getElementById("price").value = price;
+        if (type == "season") {
+            if (document.getElementById("MainContent_winter").checked) {
+                price += 3500;
+            }
+            if (document.getElementById("MainContent_spring").checked) {
+                price += 4100;
+            }
+            if (document.getElementById("MainContent_summer").checked) {
+                price += 9300;
+            }
+            if (document.getElementById("MainContent_autumn").checked) {
+                price += 2900;
+            }
+        }
+        
 
 
+        if (type == "campingvogn" || type == "telt") {
+            if (document.getElementById("MainContent_waterView").checked) {
+                price += 75 * Difference_In_Days;
+            }
+        } else if(type == "hytte") {
+            if (document.getElementById("MainContent_endClean").checked) {
+                price += 150;
+            }
+        }
+        
+        
+        if (type == "hytte") {
+            price += parseInt(document.getElementById("MainContent_bedThing").value) * 30;
+        }
+        
+        console.log(price);
+
+        document.getElementById("price").textContent = "Pris: " + price + " kr.";
+        
+    }
+
+    function viewAddons() {
+        document.getElementById("counters").style.display = 'inline-block';
+        document.getElementById("addons").style.display = 'inline-block';
     }
 
 

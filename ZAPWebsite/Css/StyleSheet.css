@@ -264,7 +264,7 @@ header {
     color: white;
     position: relative;
     top: 50px;
-    left: 20%;
+    left: 90%;
     border: 2px solid black;
     background: gray;
     padding: 10px;
@@ -320,7 +320,7 @@ header {
     color: white;
     position: relative;
     top: 50px;
-    left: 40%;
+    left: 20%;
     border: 2px solid black;
     background: gray;
     padding: 10px;
@@ -368,6 +368,17 @@ header {
 .footer span{
     margin-left: 20px;
 
+}
+
+.PriceOrder {
+    font-size: 60px;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    background: gray;
+    color: white;
+    border-radius: 6px;
+    padding-right: 10px;
 }
 
 

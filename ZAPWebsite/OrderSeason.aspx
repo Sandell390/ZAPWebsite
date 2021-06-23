@@ -17,7 +17,7 @@
                             
                             <a href="Booking.aspx"><img class="backImg" src="Pics/backArrow.png"/></a>
                             <asp:Button OnClick="buttonOrder_OnClick" ID="buttonOrder" CssClass="buttonOrder" runat="server" Text="Bestil" />
-                            
+            <p id="price" class="PriceOrder"></p>
         
                         </section>
         
@@ -38,8 +38,24 @@
                     <label for="Address">Address</label>
                     <input type="text" maxlength="64"  name="Address" ID="Address" runat="server"/>
                 </section>
+                
+                <section class="input-date">
+                    
+                    <label for="winter">Vinter (1. Oktober -> 31. Marts)</label>
+                    <input onclick="viewAddons();getPrice('season');" type="radio" id="winter" name="season" value="1" runat="server"/>
+                    
+                    <label for="spring">Forår (1. April -> 30. Juni)</label>
+                    <input onclick="viewAddons();getPrice('season');" type="radio" id="spring" name="season" value="2" runat="server"/>
+                    
+                    <label for="summer">Sommer (1. April -> 30. September)</label>
+                    <input onclick="viewAddons();getPrice('season');" type="radio" id="summer" name="season" value="3" runat="server"/>
+                    
+                    <label for="autumn">Efterår (15. August -> 31. Oktober)</label>
+                    <input onclick="viewAddons();getPrice('season');" type="radio" id="autumn" name="season" value="4" runat="server"/>
 
-                <section class="input-counters">
+                </section>
+
+                <section class="input-counters" id="counters" style="display: none">
 
                     <p>Hvad vil du bo i?</p>
 
@@ -52,36 +68,18 @@
 
                 </section>
                 
-                <section class="input-addons">
+                <section class="input-addons" id="addons" style="display: none">
 
                     <label for="water">God udsigt til vandet</label>
-                    <input type="checkbox" name="water" ID="waterView" runat="server"/>
+                    <input onchange="getPrice('campingvogn');" type="checkbox" name="water" ID="waterView" runat="server"/>
 
                     <label for="big" id="labelBig" style="display: none">Store plads</label>
-                    <input style="display: none" type="checkbox" name="big" ID="bigPlace" runat="server"/>
+                    <input onchange="getPrice('campingvogn');" style="display: none" type="checkbox" name="big" ID="bigPlace" runat="server"/>
                     
                     
 
                 </section>
                 
-                <section class="input-date">
-                    
-                    <label for="winter">Vinter (1. Oktober -> 31. Marts)</label>
-                    <input type="radio" id="winter" name="season" value="1" runat="server"/>
-                    
-                    <label for="spring">Forår (1. April -> 30. Juni)</label>
-                    <input type="radio" id="spring" name="season" value="2" runat="server"/>
-                    
-                    <label for="summer">Sommer (1. April -> 30. September)</label>
-                    <input type="radio" id="summer" name="season" value="3" runat="server"/>
-                    
-                    <label for="autumn">Efterår (15. August -> 31. Oktober)</label>
-                    <input type="radio" id="autumn" name="season" value="4" runat="server"/>
-
-                </section>
-                
-                
-
             </form>
         </article>
     </section>
